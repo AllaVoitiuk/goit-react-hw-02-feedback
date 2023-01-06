@@ -5,6 +5,8 @@ import { Statistics } from "./Statistics/Statistics";
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 
+
+
 export const options = [
   {id:'good', nameBtn: 'Good'},
   {id:'neutral', nameBtn: 'Neutral'},
@@ -54,6 +56,7 @@ export class App extends Component {
           positivePercentage={this.countPositiveFeedbackPercentage()}
         />
       </Section>
+      //<Notification message="There is no feedback"/>
     );
   }
 };

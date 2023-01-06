@@ -1,5 +1,7 @@
 import { PropTypes } from 'prop-types';
 import css from './Statistics.module.css';
+// import Notiflix from 'notiflix';
+import { Notification } from 'components/Notification/Notification';
 
 export const Statistics = ({
   good,
@@ -11,7 +13,7 @@ export const Statistics = ({
   return (
     <>
       <h2 className={css.title}>Statistics</h2>
-      {total && (
+      {total ? (
         <ul>
           <li className={css.item}>Good: {good}</li>
           <li className={css.item}>Neutral: {neutral}</li>
@@ -19,7 +21,7 @@ export const Statistics = ({
           <li className={css.item}>Total: {total}</li>
           <li className={css.item}>Positive feedback: {positivePercentage}%</li>
         </ul>
-      )}
+      ) :  (<Notification message = "There is no feedback"/>)}
     </>
   );
 };
