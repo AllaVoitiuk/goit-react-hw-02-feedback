@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-// import css from "./ExpressoFeedback/ExpressoFeedback.module.css";
-import { Statistics } from "./Statistics/Statistics";
-//import css from './Statistics/Statistics.module.css';
+import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 
-
-
 export const options = [
-  {id:'good', nameBtn: 'Good'},
-  {id:'neutral', nameBtn: 'Neutral'},
-  {id:'bad', nameBtn: 'Bad'},
-]
+  { id: 'good', nameBtn: 'Good' },
+  { id: 'neutral', nameBtn: 'Neutral' },
+  { id: 'bad', nameBtn: 'Bad' },
+];
 
 export class App extends Component {
   state = {
@@ -56,7 +52,6 @@ export class App extends Component {
           positivePercentage={this.countPositiveFeedbackPercentage()}
         />
       </Section>
-      //<Notification message="There is no feedback"/>
     );
   }
-};
+}

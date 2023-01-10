@@ -1,4 +1,3 @@
-
 import { PropTypes } from 'prop-types';
 import css from './Section.module.css';
 
@@ -7,7 +6,6 @@ export const Section = ({ children, title }) => {
     <div className={css.container}>
       <h1 className={css.title}>{title}</h1>
       {children}
-      
     </div>
   );
 };
