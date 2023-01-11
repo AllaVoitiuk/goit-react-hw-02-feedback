@@ -1,19 +1,19 @@
 import css from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export const FeedbackOptions = ({ btnNames, onLeaveFeedback }) => {
   return (
     <div className={css.button_box}>
-      {options.map(option => {
+      {btnNames.map(name => {
         // console.log(option.id);
         return (
           <button
-            name={option.id}
-            key={option.id}
+            name={name}
+            key={name}
             type="button"
             onClick={onLeaveFeedback}
           >
-            {option.nameBtn}
+            {name[0].toUpperCase() + name.slice(1)}
           </button>
         );
       })}
@@ -22,10 +22,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string,
-      nameBtn: PropTypes.string,
-    })
-  ).isRequired,
+  btnNames: PropTypes.array.isRequired,
+  onLeaveFeedback:PropTypes.func,
 };

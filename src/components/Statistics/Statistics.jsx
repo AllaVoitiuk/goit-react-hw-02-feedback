@@ -12,7 +12,7 @@ export const Statistics = ({
 }) => {
   return (
     <>
-      <h2 className={css.title}>Statistics</h2>
+      {/* <h2 className={css.title}>Statistics</h2> */}
       {total ? (
         <ul>
           <li className={css.item}>Good: {good}</li>
